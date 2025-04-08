@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Ngoc Huy - Project Portfolio</title>
+  <style>
+    .container {
+      max-width: 2000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .portfolio-box {
+      background-color: white;
+      border-radius: 20px;
+      padding: 60px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-title-box {
+      background-color: #e6f0ff; /* xanh dương nhạt */
+      padding: 4px 12px;
+      border-left: 15px solid #007bff7a; /* viền xanh dương đậm */
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .intro-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 0;
+      border-radius: 20px;
+      margin-bottom: 0;
+    }
+
+    .intro-text {
+      flex: 1;
+      padding-right: 40px;
+      padding-left: 50px;
+      font-size: 42px;
+    }
+
+    .intro-text ul {
+      padding-left: 50px;
+    }
+
+    .intro-image {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 0 100px 100px 0;
+      object-fit: cover;
+    }
+
+    /* structure for 1. Delivery mobile robot – Viettel Robotics – (Sep 2021 ~ Sep 2023)​ */
+    .project-flex {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .left-image{
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+
+    .left-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .right-text-image {
+      font-size: 30px;
+      flex: 4;
+      min-width: 500px;
+      min-height: 850px;
+      padding-left: 40px;
+      position: relative;
+      padding-left: 40px;
+      background-image: url("media/safety-layers.png");
+      background-repeat: no-repeat;
+      background-position: right 80%; /* chỉnh thủ công vị trí */
+      background-size: 450px; /* chỉnh cỡ ảnh theo ý bạn */
+    }
+
+    /* MPC part */
+    .video-text-row {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .text-column {
+      flex: 2.5;
+      min-width: 250px;
+      font-size: 30px;
+    }
+
+    .video-column {
+      flex: 3;
+      min-width: 300px;
+    }
+
+    .video-column video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    /* END setup for 1. Delivery mobile robot – Viettel Robotics – (Sep 2021 ~ Sep 2023)​*/
+
+    /* setup for 2. Robot Catching Project – Robot Learning Lab – NAIST (Sep 2023 ~ Sep 2025)​ */
+    .centered-image-1 {
+      text-align: center;
+      margin: 20px 20px; /* Khoảng cách trên/dưới ảnh */
+    }
+
+    .centered-image-1 img {
+      width: 1200px;      /* 👈 bạn có thể thay đổi */
+      height: auto;      /* Giữ tỷ lệ ảnh */
+      border-radius: 10px; /* (tuỳ chọn) Bo góc nhẹ cho đẹp */
+    }
+
+
+    .project-flex-rocat {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .left-image-rocat{
+      flex: 2.5;
+      min-width: 200px;
+      position: relative;
+    }
+
+    .left-image-rocat img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .right-text-image-rocat {
+      font-size: 30px;
+      flex: 2;
+      min-width: 500px;
+      min-height: 700px;
+      padding-left: 40px;
+      position: relative;
+      padding-left: 40px;
+      background-image: url("media/robot-catching-trajectory-prediction-result.png");
+      background-repeat: no-repeat;
+      background-position: 50% 50%; /* chỉnh thủ công vị trí */
+      background-size: 800px; /* chỉnh cỡ ảnh theo ý bạn */
+    }
+
+    .video-rocat-column {
+      min-width: 500px;
+      flex: 5.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .equal-video {
+      height: 500px; /* 👈 Chiều cao cố định */
+      width: 100%;
+      object-fit: cover; /* Cắt đều video nếu tỷ lệ không khớp */
+      border-radius: 10px;
+    }
+    .video-rocat-row {
+      flex: 4.5;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      flex-wrap: wrap; /* đảm bảo responsive trên màn hình nhỏ */
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      background-color: #f4f4f4;
+      font-size: 30px;
+    }
+    body ul {
+      padding-left: 50px;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+    h1 {
+      font-size: 100px; /* hoặc 64px, tùy bạn muốn to bao nhiêu */
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 10px 0;
+      margin-bottom: 30px;
+      border: none;
+      background: none;
+      box-shadow: none;
+    }
+
+    video, img, iframe {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <section class="portfolio-box">
+      <section class="intro-section">
+        <div class="intro-text">
+          <h1>Project Portfolio</h1>
+          <img src="media/line-intro.png" alt="divider" style="width: 700px; margin: 10px 0;">
+          <p><strong>Presenter:</strong> Nguyen Ngoc Huy</p>
+          <ul>
+            <li>Master’s student</li>
+            <li>Robot learning laboratory</li>
+            <li>Nara Institute of Science and Technology</li>
+          </ul>
+          <p><strong>Position:</strong> Robotics Engineer</p>
+        </div>
+        <div class="intro-image">
+          <img src="media/avatar.png" alt="Nguyen Ngoc Huy" />
+        </div>
+      </section>
+
+      <div class="main-content">
+        <section>
+          <div class="project-title-box">
+            <h2>1. VOR Project (Delivery Mobile Robot) – Viettel Robotics (Sep 2021 ~ Sep 2023)</h2>
+          </div>
+          <div class="project-flex">
+            <!-- Cột trái -->
+            <div class="left-image">
+              <img src="media/Viettel-AMR.png" alt="Viettel Robot" />
+            </div>
+        
+            <!-- Cột phải -->
+            <div class="right-text-image">
+              <h3>Role: Robotics software engineer</h3>
+              <h3>Tasks and responsibilities:</h3>
+              <ul>
+                <li>Tested, integrated SLAM, localization, motion planning algorithms in simulation and deployed on real robots</li>
+                <li>Evaluated <strong>hardware devices</strong>: sensors, embedded computers</li>
+                <li><strong>Safety program development:</strong>
+                  <ul>
+                    <li>Multiple safety layers around robot to limit its movement speed.</li>
+                    <li><strong>Ensure the safety </strong> of both humans and robot during operation.</li>
+                    <li>Based on RGB-D cameras, 2D LiDAR, and ultrasonic sensors (C++).</li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- <img src="media/safety-layers.png" alt="Safety layers" class="safety-image" /> -->
+            </div>
+          </div>
+          
+          <div class="video-text-row">
+            <!-- Cột video bên trái -->
+            <div class="video-column">
+              <video controls>
+                <source src="media/motion-planner-MPC.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p style="text-align: center;">Robot can avoid <strong><i>close</i></strong>, <strong><i>unseen</i></strong> obstacles very smoothly (<a href="https://www.linkedin.com/posts/huy-nguyen-ngoc-8a89b5194_trajectoryabrplanning-mobileabrrobot-wmb-activity-7104472464885235712-q9XQ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC21zcABGXT2YbTsI-UY_fjiaozDqxo8VNk">link</a>)</p>
+            </div>
+          
+            <!-- Cột chữ bên phải -->
+            <div class="text-column">
+              <ul>
+                <li><strong>Motion planning algorithm development:</strong>
+                  <ul>
+                    <li>Based on <strong>MPC</strong></li>
+                    <li>Running on a <strong>GPU</strong> (C++, CUDA)</li>
+                    <li>Control frequency: <strong>30 Hz</strong> </li>
+                    <li>Max robot speed: <strong>1.2 m/s</strong> </li>
+                    <li><strong>Idea:</strong>
+                      <ul>
+                        <li>Sample multiple actions in action space</li>
+                        <li>Select the best action sequence based on:
+                          <ul>
+                            <li>Speed, moving time</li>
+                            <li>Distance to obstacles, goal</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+        <section>
+          <div class="project-title-box">
+            <h2>2. Robot Catching Project – Robot Learning Lab – NAIST (Sep 2023 ~ Sep 2025)</h2>
+            <ul>
+          </div>
+          <h3>Roles:</h3>
+          <ul>
+            <li><strong>Master’s</strong> student​</li>
+            <li><strong>KMMF Parasonic</strong> Scholar​</li>
+          </ul>
+          <h3>Project description:</h3>
+          <ul>
+            <li><strong>Quadruped robot</strong> designed to capture flying objects, focus on future trajectory prediction model</li>
+            <li><strong>Future trajectory prediction model:</strong></li>
+            <ul>
+              <li>Predict future trajectory of objects -> predict future impact point​</li>
+              <li>Based on <strong>LSTM​</strong> </li>
+            </ul>
+            <li><strong>Dataset:</strong> Collected trajectory data of <strong>20 objects</strong>, with varying shapes, each influenced by <strong>distinct aerodynamic</strong> forces​</li>
+            <ul>
+              <li>Repo: <a href="https://github.com/Ngochuy2137/rocat_dataset">rocat_dataset</a> (will be public after paper publication)</li>
+            </ul>
+            <br>
+
+            <div class="project-flex-rocat">
+              <!-- Cột trái -->
+              <div class="left-image-rocat">
+                <img src="media/robot-catching-intro.png" alt="robot-catching-intro">
+              </div>
+              <!-- Cột phải -->
+              <div class="right-text-image-rocat">
+                <li><strong>Improvement: </strong> Our model improved the accuracy by <strong>more than 40%</strong> compared to the baseline method.​</li>
+                <!-- <img src="media/safety-layers.png" alt="Safety layers" class="safety-image" /> -->
+              </div>
+            </div>
+
+            <li><strong>Experiments​:</strong></li>
+            <div class="video-rocat-row">
+              <div class="video-rocat-column">
+                <video controls class="equal-video">
+                  <source src="media/robot-catching-gazebo.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">Gazebo simulation​</p>
+              </div>
+            
+              <div class="video-rocat-column">
+                <video controls class="equal-video">
+                  <source src="media/robot-catching-real-exp.mp4" type="video/mp4">
+                </video>
+                <p style="text-align: center;">Real robot experiment - More videos: <a href="https://1drv.ms/f/c/cb08dce314f933a3/Eu2DDYKfnBtMs6TRSleHpPIBtwwSBpOOfsLIRn2rY91zVA?e=wAh2RX">link</a></p>
+              </div>
+            </div>
+          </ul>
+        </section>
+
+        <section>
+          <div class="project-title-box">
+            <h2>3. Legged robot control – TOW Research Team (Mar 2023 ~ Present)</h2>
+          </div>
+          <ul>
+            <li><strong>Sensor fusion</strong> based on Kalman Filter, Extended Kalman Filter and Unscented Kalman Filter​</li>
+            <li><strong>Legged robot control</strong> based on learning method (Reinforcement learning and VLA):
+              <ul>
+                <li>Currently in survey phase</li>
+              ​</ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <ul>
+            <li>Email: <a href="mailto:Huy.nguyenngoc2137@gmail.com">Huy.nguyenngoc2137@gmail.com</a></li>
+            <li>Phone: <a href="tel:+817085552137">+81 7085552137</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/huy-nguyen-ngoc-8a89b5194/">Profile</a></li>
+            <li>GitHub: <a href="https://github.com/Ngochuy2137">Ngochuy2137</a></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
