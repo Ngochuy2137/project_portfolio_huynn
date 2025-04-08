@@ -6,7 +6,7 @@
   <title>Nguyen Ngoc Huy - Project Portfolio</title>
   <style>
     .container {
-      max-width: 2000px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -39,7 +39,7 @@
       flex: 1;
       padding-right: 40px;
       padding-left: 50px;
-      font-size: 42px;
+      font-size: 32px;
     }
 
     .intro-text ul {
@@ -80,17 +80,17 @@
     }
 
     .right-text-image {
-      font-size: 30px;
+      font-size: 22px;
       flex: 4;
       min-width: 500px;
-      min-height: 900px;
+      min-height: 800px;
       padding-left: 40px;
       position: relative;
       padding-left: 40px;
       background-image: url("media/safety-layers.png");
       background-repeat: no-repeat;
       background-position: right 90%; /* chỉnh thủ công vị trí */
-      background-size: 450px; /* chỉnh cỡ ảnh theo ý bạn */
+      background-size: 350px; /* chỉnh cỡ ảnh theo ý bạn */
     }
 
     /* MPC part */
@@ -105,12 +105,12 @@
     .text-column {
       flex: 2.5;
       min-width: 250px;
-      font-size: 30px;
+      font-size: 22px;
     }
 
     .video-column {
       flex: 3;
-      min-width: 300px;
+      min-width: 250px;
     }
 
     .video-column video {
@@ -154,7 +154,7 @@
     }
 
     .right-text-image-rocat {
-      font-size: 30px;
+      font-size: 22px;
       flex: 2;
       min-width: 500px;
       min-height: 700px;
@@ -164,11 +164,11 @@
       background-image: url("media/robot-catching-trajectory-prediction-result.png");
       background-repeat: no-repeat;
       background-position: 50% 50%; /* chỉnh thủ công vị trí */
-      background-size: 800px; /* chỉnh cỡ ảnh theo ý bạn */
+      background-size: 650px; /* chỉnh cỡ ảnh theo ý bạn */
     }
 
-    .video-rocat-column {
-      min-width: 500px;
+    .video-column-rocat {
+      min-width: 380px;
       flex: 5.5;
       display: flex;
       flex-direction: column;
@@ -176,18 +176,18 @@
     }
 
     .equal-video {
-      height: 500px; /* 👈 Chiều cao cố định */
+      height: 380px; /* 👈 Chiều cao cố định */
       width: 100%;
       object-fit: cover; /* Cắt đều video nếu tỷ lệ không khớp */
       border-radius: 10px;
     }
-    .video-rocat-row {
+    .video-row-rocat {
       flex: 4.5;
       display: flex;
-      gap: 30px;
+      gap: 22px;
       justify-content: space-between;
       flex-wrap: wrap; /* đảm bảo responsive trên màn hình nhỏ */
-      margin-bottom: 30px;
+      margin-bottom: 22px;
       margin-top: 0px;
     }
 
@@ -196,7 +196,7 @@
       line-height: 1.6;
       margin: 40px;
       background-color: #f4f4f4;
-      font-size: 30px;
+      font-size: 22px;
     }
     body ul {
       padding-left: 50px;
@@ -206,7 +206,7 @@
       color: #333;
     }
     h1 {
-      font-size: 100px; /* hoặc 64px, tùy bạn muốn to bao nhiêu */
+      font-size: 80px; /* hoặc 64px, tùy bạn muốn to bao nhiêu */
     }
 
     a {
@@ -220,7 +220,7 @@
 
     section {
       padding: 10px 0;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
       border: none;
       background: none;
       box-shadow: none;
@@ -366,15 +366,15 @@
             </div>
 
             <li><strong>Experiments​:</strong></li>
-            <div class="video-rocat-row">
-              <div class="video-rocat-column">
+            <div class="video-row-rocat">
+              <div class="video-column-rocat">
                 <video controls class="equal-video">
                   <source src="media/robot-catching-gazebo.mp4" type="video/mp4">
                 </video>
                 <p style="text-align: center;">Gazebo simulation​</p>
               </div>
             
-              <div class="video-rocat-column">
+              <div class="video-column-rocat">
                 <video controls class="equal-video">
                   <source src="media/robot-catching-real-exp.mp4" type="video/mp4">
                 </video>
