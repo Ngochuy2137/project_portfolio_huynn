@@ -58,7 +58,7 @@
       object-fit: cover;
     }
 
-    /* structure for 1. Delivery mobile robot – Viettel Robotics – (Sep 2021 ~ Sep 2023)​ */
+    /* structure for 1. Delivery mobile robot – Viettel AI – (Sep 2021 ~ Sep 2023)​ */
     .project-flex {
       display: flex;
       gap: 40px;
@@ -119,7 +119,7 @@
       border-radius: 10px;
     }
 
-    /* END setup for 1. Delivery mobile robot – Viettel Robotics – (Sep 2021 ~ Sep 2023)​*/
+    /* END setup for 1. Delivery mobile robot – Viettel AI – (Sep 2021 ~ Sep 2023)​*/
 
     /* setup for 2. Robot Catching Project – Robot Learning Lab – NAIST (Sep 2023 ~ Sep 2025)​ */
     .centered-image-1 {
@@ -163,7 +163,7 @@
       padding-left: 40px;
       background-image: url("media/robot-catching-trajectory-prediction-result.png");
       background-repeat: no-repeat;
-      background-position: 50% 50%; /* chỉnh thủ công vị trí */
+      background-position: 50% 65%; /* chỉnh thủ công vị trí */
       background-size: 650px; /* chỉnh cỡ ảnh theo ý bạn */
     }
 
@@ -262,9 +262,47 @@
       </section>
 
       <div class="main-content">
+        <!-- Career Timeline Section -->
+        <section style="text-align: center; margin-bottom: 60px; position: relative;">
+          <p><strong><em>Below is a brief timeline highlighting key milestones in my career.</em></strong></p>
+
+          <!-- Container for image and absolute links -->
+          <div style="position: relative; display: inline-block;">
+            <img src="media/career_history.png" alt="Career Timeline" style="max-width: 1350px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+            <!-- Link Box 1: SmartAGV -->
+            <div style="position: absolute; top: 72%; left: 8%; font-size: 20px;">
+              <i><a href="https://smartagv.ai" target="_blank" style="text-decoration: none; color: #0056b3;">Link: https://smartagv.ai</a></i>
+            </div>
+
+            <!-- Link Box 2: Viettel AI -->
+            <div style="position: absolute; top: 72%; left: 35%; font-size: 20px;">
+              <i><a href="https://viettelai.vn" target="_blank" style="text-decoration: none; color: #0056b3;">Link: https://viettelai.vn</a></i>
+            </div>
+
+            <!-- Link Box 3: NAIST -->
+            <div style="position: absolute; top: 72%; left: 62%; font-size: 20px;">
+              <i><a href="https://sites.google.com/view/naist-robot-learning-en" target="_blank" style="text-decoration: none; color: #0056b3;">
+                Link: Robot Learning lab - NAIST
+              </a></i>
+            </div>
+          </div>
+        </section>
+
+        <h2 style="
+          font-weight: bold;
+          font-size: 45px;
+          border-bottom: 4px solid #333;
+          display: inline-block;
+          padding-bottom: 0px;
+          margin-bottom: 40px;
+        ">
+          Highlighted Projects
+        </h2>
+        
         <section>
           <div class="project-title-box">
-            <h2>1. VOR Project (Delivery Mobile Robot) – Viettel Robotics (Sep 2021 ~ Sep 2023)</h2>
+            <h2>1. VOR Project (Delivery Mobile Robot) – Viettel AI (Sep 2021 ~ Sep 2023)</h2>
           </div>
           <div class="project-flex">
             <!-- Cột trái -->
@@ -279,7 +317,7 @@
               <h3>Tasks and responsibilities:</h3>
               <ul>
                 <li>Tested, integrated SLAM, localization, motion planning algorithms in simulation and deployed on real robots</li>
-                <li>Evaluated <strong>hardware devices</strong>: sensors, embedded computers</li>
+                <li>Evaluated <strong>hardware devices</strong>: sensors (Lidar, RGB-D camera, IMU, ...), embedded computers</li>
                 <li><strong>Safety program development:</strong>
                   <ul>
                     <li>Multiple safety layers around robot to limit its movement speed.</li>
@@ -313,8 +351,8 @@
                     <li>Max robot speed: <strong>1.2 m/s</strong> </li>
                     <li><strong>Idea:</strong>
                       <ul>
-                        <li>Sample multiple actions in action space</li>
-                        <li>Select the best action sequence based on:
+                        <li>Sampling multiple actions in action space</li>
+                        <li>Selecting the best action sequence based on:
                           <ul>
                             <li>Speed, moving time</li>
                             <li>Distance to obstacles, goal</li>
@@ -360,8 +398,7 @@
               </div>
               <!-- Cột phải -->
               <div class="right-text-image-rocat">
-                <li><strong>Improvement: </strong> Our model improved the accuracy by <strong>more than 40%</strong> compared to the baseline method.​</li>
-                <!-- <img src="media/safety-layers.png" alt="Safety layers" class="safety-image" /> -->
+                <li><strong>Improvement: </strong> Our model improved the accuracy <strong> by over 40%</strong> compared to baseline method at <strong>early stage</strong> of the prediction (50 frames to goal) - the most critical phase for <strong>long-horizon prediction.</strong>​</li>
               </div>
             </div>
 
@@ -399,13 +436,20 @@
         </section>
 
         <section>
-          <h2>Contact</h2>
-          <ul>
+          <h2 style="
+            font-weight: bold;
+            font-size: 45px;
+            border-bottom: 4px solid #333;
+            display: inline-block;
+            padding-bottom: 0px;
+            margin-bottom: 40px;
+          ">
+            Contact
+          </h2>
             <li>Email: <a href="mailto:Huy.nguyenngoc2137@gmail.com">Huy.nguyenngoc2137@gmail.com</a></li>
             <li>Phone: <a href="tel:+817085552137">+81 7085552137</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/huy-nguyen-ngoc-8a89b5194/">Profile</a></li>
             <li>GitHub: <a href="https://github.com/Ngochuy2137">Ngochuy2137</a></li>
-          </ul>
         </section>
       </div>
     </section>
